@@ -1,0 +1,75 @@
+
+
+
+<div class="bg">
+   
+  <section id="content">
+      <div class="sub-page">
+      <div class="sub-page-left box-9">
+          <h2 class="p4">Carros Cadastrados</h2>
+            
+            <!--Add Carro Button-->
+            <div class="my-3">
+                <a href="/cadastrocarros"><button type="button" class="btn btn-primary">Add carro</button></a>
+            </div>
+            
+            <table class="table border" >
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">placa</th>
+                        <th scope="col">Renavam</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Ano de fabricação</th>
+                        <th scope="col">Ano de Modelo</th>
+                        <th scope="col">Cor</th>
+                        <th scope="col">Combustivel</th>
+                        <th scope="col">Quilometragem</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Valor de Compra</th>
+                        <th scope="col">Anexo documento</th>
+                        <th scope="col">Data de Entrada</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr *ngFor="let carro of carros">
+                        <td>{{carro.id}}</td>
+                        <td>{{carro.placa}}</td>
+                        <td>{{carro.renavam}}</td>
+                        <td>{{carro.marca}}</td>
+                        <td>{{carro.modelo}}</td>
+                        <td>{{carro.anodefabricacao}}</td>
+                        <td>{{carro.anodemodelo}}</td>
+                        <td>{{carro.cor}}</td>
+                        <td>{{carro.combustivel}}</td>
+                        <td>{{carro.quilometragem}}</td>
+                        <td>{{carro.tipo}}</td>
+                        <td>{{carro.valordecompra}}</td>
+                        <td>{{carro.anexodoc}}</td>
+                        <td>{{carro.datadeentrada}}</td>
+                        <td>
+                        <div class="d-inline mx-2">
+                            <button class="btn btn-warning" (click)="updateCarro(carro.id)" type="button">Update</button>
+                        </div>
+                        <div class="d-inline">
+                          <button class="btn btn-danger" (click)="deleteCarro(carro.id)" type="button">Delete</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+    
+                </table>
+            </div>
+            </div>        
+            
+        </section>
+        <footer>
+            Kaspper Motors &copy; 2023
+        </footer>
+    </div>
+
+<router-outlet></router-outlet>
+
+

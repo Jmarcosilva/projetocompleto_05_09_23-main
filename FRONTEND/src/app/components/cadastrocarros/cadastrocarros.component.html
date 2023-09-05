@@ -1,0 +1,171 @@
+<div class="bg">
+    <header>
+        <div class="main wrap">
+            <h1><a href="/"><img alt="" src="assets/images/logo2.png" style="width: 40%; height: 30%;"></a></h1>
+            <p style="margin-top: 4%;">VENDA, COMPRA E TROCA <span>(11) 91234-5678</span></p>
+        </div>
+    </header>  
+
+
+    <section id="content">
+        <div class="sub-page">
+        <div class="sub-page-left box-9">
+            <h2 class="p4">Cadastro de Carros</h2>
+
+
+         
+            <div class="container">
+     <!------------------------------------------------------------->   
+                      
+                <form [formGroup]="form" (ngSubmit)="submit()">
+
+                                <!--placa-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                        <label for="placa" class="form-label">Placa</label>
+                        <input id="placa"  formControlName="placa" type="text" name="placa" class="form-control" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <!--Renavam-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                        <label for="renavam" class="form-label">Renavam</label>
+                        <input id="renavam" type="number" formControlName="renavam" name="renavam" class="form-control" placeholder="" required>
+                        </div>
+                    </div>
+                    
+                    <!--marca-->
+                    <div class="mb-3">
+                        <label for="marca" class="form-label">Marca</label>
+                        <select class="form-select" aria-label="Default select example" id="marca" name="marca" formControlName="marca" required>
+                            <option selected>Escolha</option>
+                            <option value="1">Audi</option>
+                            <option value="2">BMW</option>
+                            <option value="3">Chevrolet</option>
+                            <option value="4">Ford</option>
+                            <option value="5">Honda</option>
+                            <option value="6">Hyundai</option>
+                            <option value="7">Kia</option>
+                            <option value="8">Mazda</option>
+                            <option value="9">Mercedes-Benz</option>
+                            <option value="10">Nissan</option>
+                            <option value="11">Subaru</option>
+                            <option value="12">Tesla</option>
+                            <option value="13">Toyota</option>
+                            <option value="14">Volkswagen</option>
+                            <option value="15">Volvo</option>
+                        </select>
+                    </div>
+
+                
+                    <!--Modelo-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="modelo" class="form-label">Modelo</label>
+              <input id="modelo" type="text"  formControlName="modelo" name="modelo" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+          <!--Ano de Fabricação-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="anodefabricacao" class="form-label">Ano de Fabricação</label>
+              <input id="anodefabricacao" type="number"  formControlName="anodefabricacao" name="anodefabricacao" class="form-control" placeholder="" required>
+            </div>
+          </div>
+          
+          <!--Ano de Modelo-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="anodemodelo" class="form-label">Ano de Modelo</label>
+              <input id="anodemodelo" type="number"  formControlName="anodemodelo" name="anodemodelo" class="form-control" placeholder="" required>
+            </div>
+          </div>
+          
+          <!--Cor-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="cor" class="form-label">Cor</label>
+              <input id="cor" type="text"  formControlName="cor" name="cor" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+          <!--Combustível-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="combustivel" class="form-label">Combustível</label>
+              <input id="combustivel" type="text"  formControlName="combustivel" name="combustivel" class="form-control" placeholder="" required>
+            </div>
+          </div>
+          
+          <!--Quilometragem-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="quilometragem" class="form-label">Quilometragem</label>
+              <input id="quilometragem" type="number"  formControlName="quilometragem" name="quilometragem" class="form-control" placeholder="" required>
+            </div>
+          </div>
+
+
+                    <!--tipo-->
+                    <div class="mb-3">
+                        <label for="tipo" class="form-label">Tipo de Veículo</label>
+                        <select class="form-select" aria-label="Default select example" id="tipo" name="tipo" formControlName="tipo" required>
+                            <option selected>Escolha</option>
+                            <option value="1">Hatch</option>
+                            <option value="2">Sedã</option>
+                            <option value="3">SUV</option>
+                            <option value="4">Picapes</option>
+                            <option value="5">Crossover</option>
+                            <option value="6">Perua </option>
+                            <option value="7">Minivan</option>
+                            <option value="8">Esportivo</option>
+                            <option value="9">Furgão</option>
+                        </select>
+                    </div>
+
+                
+                    <!--Valor de Compra-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                        <label for="valordecompra" class="form-label">Valor de Compra</label>
+                        <input id="valordecompra" type="number"  formControlName="valordecompra" name="valordecompra" class="form-control" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <!--Anexo documento-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                        <label for="anexodoc" class="form-label">Anexo Documento</label>
+                        <input id="anexodoc" type="file"  formControlName="anexodoc" name="anexodoc" class="form-control" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <!--Data de Entrada-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                        <label for="datadeentrada" class="form-label">Data de Entrada</label>
+                        <input id="datadeentrada" type="date"  formControlName="datadeentrada" name="datadeentrada" class="form-control" placeholder="" required>
+                        </div>
+                    </div>
+
+                
+                    <!--enviar-->
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                          <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">
+                        </div>
+                    </div>
+
+                </form><br><br>
+                </div>
+        </div>
+        </div>        
+        
+    </section>
+    
+    <footer>
+        Kaspper Motors &copy; 2023
+    </footer>
+</div>
